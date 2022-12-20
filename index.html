@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
     <div id="app">
         <ul>
-            <!-- <li v-for="(elem, index) in todolist" :class="`line-through`"> {{ todolist[index].text }}</li> -->
-            <li v-for="(elem, index) in todolist" :class="todolist[index].done ? `line-through` : `` "> {{ todolist[index].text }}</li>
+            <!-- // MILESTONE 1
+            // Stampare all'interno di una lista HTML un item per ogni todo. Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato. -->
+            <li v-for="(elem, index) in todolist" :class="todolist[index].done ? `line-through` : `` "> {{ todolist[index].text }} <button @click="removeTask"><i class="fa-solid fa-square-xmark"></i></button></li> 
         </ul>
+        <input class="form-control" placeholder="Inserisci qui" v-model="newTask" @keyup.enter="addTask">
+        <button @click="addTask">Add</button>
     </div>
     
    
