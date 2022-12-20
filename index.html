@@ -14,7 +14,7 @@
         <ul>
             <!-- // MILESTONE 1
             // Stampare all'interno di una lista HTML un item per ogni todo. Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato. -->
-            <li v-for="(elem, index) in todolist" :class="todolist[index].done ? `line-through` : `` "> {{ todolist[index].text }} <button @click="removeTask"><i class="fa-solid fa-square-xmark"></i></button></li> 
+            <li v-for="(elem, index) in todolist" :class="todolist[index].done ? `line-through` : `` "> {{ todolist[index].text }} <button @click="removeTask(index)"><i class="fa-solid fa-square-xmark"></i></button></li> 
         </ul>
         <input class="form-control" placeholder="Inserisci qui" v-model="newTask" @keyup.enter="addTask">
         <button @click="addTask">Add</button>

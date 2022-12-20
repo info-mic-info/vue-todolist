@@ -6,6 +6,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            newTask: ``,
             todolist: [
                 {
                     text: "Comprare latte",
@@ -37,12 +38,13 @@ createApp({
         // Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa, il todo viene rimosso dalla lista.
         removeTask(index) {
             let remove = this.todolist.splice(index, 1)
-            console.log(remove)
+            // console.log(remove)
+            console.log(index)
         },
         // MILESTONE 3
         // Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
 
-        addTask(index) {
+        addTask() {
             let object ={
                 text: this.newTask,
                 done: false
