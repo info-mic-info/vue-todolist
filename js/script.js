@@ -23,15 +23,15 @@ createApp({
                 },
                 {
                     text: "Comprare uova",
-                    done: true
+                    done: false
                 },
                 {
                     text: "Comprare farina",
-                    done: true
+                    done: false
                 },
                 {
                     text: "Comprare lievito",
-                    done: true
+                    done: false
                 },
                 {
                     text: "Comprare zucchero",
@@ -45,7 +45,7 @@ createApp({
     methods: {
         // MILESTONE 1
         // Stampare all'interno di una lista HTML un item per ogni todo. Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
-        if()
+    
 
     }
 }).mount('#app')
